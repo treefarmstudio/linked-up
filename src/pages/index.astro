@@ -1,0 +1,111 @@
+---
+import {Icon} from 'astro-icon';
+import {mainContent, links, socialLinks} from '../links';
+---
+
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Linked Up</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a {
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .main__article {
+        margin: 0 auto;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        min-height: 90vh;
+        padding: 10vh 0;
+      }
+      .top__content {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .profile__img {
+        border-radius: 50%;
+        /* margin-bottom: 1rem; */
+      }
+      .social-links__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+      }
+      .social-links__list .social-links__link {
+        transition: transform 100ms ease-in-out;
+      }
+      .social-links__list .social-links__link:hover { 
+        transform: scale(1.1);
+      }
+      .links__list {
+        width: 100%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .links__list .links__link {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        color: #212121;
+        margin-bottom: 1rem;
+        border-radius: 3rem;
+        transition: transform 100ms ease-in-out;
+        cursor: pointer;
+      }
+      .links__list .links__link a {
+        padding: 1rem 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+      .links__list .links__link:hover {
+        transform: scale(1.025);
+      }
+    </style>
+	</head>
+	<body>
+    <article class="main__article">
+      <div class="top__content">
+        <img class="profile__img" width="128px" height="128px" src={mainContent.imgSrc} alt={`Profile image of ${mainContent.name}`} />
+        <h1>{mainContent.name}</h1>
+        <p>{mainContent.tagline}</p>
+        <ul class="social-links__list">
+          {socialLinks.map((link) => (
+            <li class="social-links__link">
+              <a href={link.url}>
+                <Icon name={link.icon} width="36px" height="36px" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <ul class="links__list">
+        {links.map(link => (
+          <li class="links__link"><a href={link.url}>{link.text}</a></li>
+        ))}
+      </ul>
+    </article>
+	</body>
+</html>
