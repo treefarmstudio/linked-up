@@ -1,5 +1,5 @@
 export const mainContent = {
-  imgSrc: `https://avatars.githubusercontent.com/u/105570423?s=200&v=4`,
+  imgSrc: `/assets/profile.png`,
   name: `Little Sticks`,
   tagline: `Web Development Learning Platform`
 };
