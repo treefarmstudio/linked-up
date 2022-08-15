@@ -16,9 +16,9 @@ export const socialLinks = [
     url: 'https://twitter.com/littlesticksdev',
   },
   {
-    title: 'Facebook',
-    icon: 'ic:baseline-facebook',
-    url: 'https://www.facebook.com/linkedupapp/',
+    title: 'YouTube',
+    icon: 'mdi:youtube',
+    url: 'https://youtube.com/c/LittleSticks',
   },
   {
     title: 'GitHub',
