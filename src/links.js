@@ -30,7 +30,7 @@ export const socialLinks = [
 export const links = [
   {
     text: 'Home',
-    url: '/',
+    url: 'https://littlesticks.dev',
     featured: true,
   },
   {
