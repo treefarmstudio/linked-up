@@ -35,14 +35,14 @@ export const links = [
   },
   {
     text: 'About',
-    url: '/about',
+    url: 'https://jaydanurwin.com/about',
   },
   {
     text: 'Uses',
-    url: '/uses',
+    url: 'https://jaydanurwin.com/uses',
   },
   {
     text: 'See my latest blog post!',
-    url: '/blog'
+    url: 'https://jaydanurwin.com/about',
   }
 ]
