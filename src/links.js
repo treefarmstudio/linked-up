@@ -23,7 +23,7 @@ export const socialLinks = [
   {
     title: 'GitHub',
     icon: 'mdi:github',
-    url: 'https://github.com/littlesticksdev',
+    url: 'https://github.com/littlesticks',
   }
 ]
 
